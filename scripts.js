@@ -58,25 +58,42 @@ up.addEventListener("click", () => {
    const movement = parseInt(rocket.style.bottom) + 10 + "px";
     rocket.style.bottom = movement;
     spaceShuttleHeight.innerHTML = parseInt(spaceShuttleHeight.innerHTML) + 10000;
-
+    if (rocket.style.bottom === '260px') {
+        rocket.style.left = '0px';
+        rocket.style.bottom = '0px';
+        spaceShuttleHeight.innerHTML = 0;
+         }
 })
 
 down.addEventListener("click", () => {
     const movement = parseInt(rocket.style.bottom) - 10 + "px";
      rocket.style.bottom = movement;
      spaceShuttleHeight.innerHTML = parseInt(spaceShuttleHeight.innerHTML) - 10000;
- 
+     if (rocket.style.bottom === '-10px') {
+        rocket.style.left = '0px';
+        rocket.style.bottom = '0px';
+        spaceShuttleHeight.innerHTML = 0;
+         }
  })
 
  right.addEventListener("click", () => {
     const movement = parseInt(rocket.style.left) + 10 + "px";
      rocket.style.left = movement;
- 
+     if (rocket.style.left === '460px') {
+        rocket.style.left = '0px';
+        rocket.style.bottom = '0px';
+        spaceShuttleHeight.innerHTML = 0;
+         }
  })
  
  left.addEventListener("click", () => {
      const movement = parseInt(rocket.style.left) - 10 + "px";
       rocket.style.left = movement;
-  
+      if (rocket.style.left === '-10px') {
+        rocket.style.left = '0px';
+        rocket.style.bottom = '0px';
+        spaceShuttleHeight.innerHTML = 0;
+         }
   })
+
 })
